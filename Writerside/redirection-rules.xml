@@ -10,4 +10,8 @@
         <description>Created after removal of "Starter" from Help Instance</description>
         <accepts>Starter.html</accepts>
     </rule>
+    <rule id="363340d9">
+        <description>Created after removal of "Reference" from Help Instance</description>
+        <accepts>Reference.html</accepts>
+    </rule>
 </rules>
