@@ -198,3 +198,8 @@ Depending on your answer to the prior question, there are multiple ways to set u
 </tabs>
 
 You are now ready to start writing patches with %product%
+
+#### Other Information {collapsible="true"}
+Though the documentation above states an absolute folder structure of `patches` with a `libraries` sub-folder, this is
+not strictly necessary, Patch Manager will go over every `.patch` file in a mod folder, so if you want to organize your
+patches another way, you are able to do so, this is just our recommendation.
