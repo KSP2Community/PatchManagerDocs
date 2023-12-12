@@ -69,3 +69,17 @@ is using CKAN, but manual installation is still possible.
         </procedure>
     </tab>
 </tabs>
+
+## Setting Up the Settings for Patch Manager inside KSP2
+
+Once you have installed Patch Manager and all the necessary prerequisites for it, since you are going to be doing development
+while having it installed, you will want to enable the `Always Invalidate Cache Option` from within the game.
+
+To do this:
+
+1. Launch KSP 2
+2. Press `Settings` once you get to the main menu
+3. Press `Mods`
+4. Scroll down until you see `Patch Manager`
+5. Toggle `Always Invalidate Cache` to `Yes`
+6. Close KSP 2
