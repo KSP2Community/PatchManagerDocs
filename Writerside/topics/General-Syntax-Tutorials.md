@@ -7,5 +7,6 @@ basics of how the language works beforehand.
 ## Basic Syntax Tutorials
 These tutorials are here to help you understand the absolute basics of Patch Manager patching
 - [Rulesets, Selectors, and Selection Blocks](Rulesets-Selectors-and-Selection-Blocks.md) explains the most fundamental
-constructs that Patch Manager has.
+construct that Patch Manager has.
+- [Selection Actions](Selection-Actions.md) explains what actions can be taken within that most fundamental construct.
 - 

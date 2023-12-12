@@ -50,3 +50,6 @@ and as such it pulls in every single part object to be filtered through the rest
 | Child Selector            | `*>Field` | Grabs all the children of every object from the lefthandside selector and filters those children through the righthandside selector                 |
 | Element Addition Selector | `+xyz`    | Adds an element to every object going through the selector and selects that element                                                                 |
 | Ensure Element Selector   | `%xyz`    | For every object going through this selector, if it has a certain element, select that, otherwise add that element to the object and then select it |
+
+
+But what can be done inside selection blocks? That is what [Selection Actions](Selection-Actions.md) are for.
