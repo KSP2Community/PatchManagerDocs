@@ -9,7 +9,9 @@
     <toc-element topic="Default-topic.md"/>
     <toc-element topic="Overview.md"/>
     <toc-element topic="Getting-Started-With-Patch-Manager.md"/>
-    <toc-element topic="General-Syntax-Tutorials.md"/>
+    <toc-element topic="General-Syntax-Tutorials.md">
+        <toc-element topic="Rulesets-Selectors-and-Selection-Blocks.md"/>
+    </toc-element>
     <toc-element topic="How-to-Use-the-Stage-System.md"/>
     <toc-element topic="Part-Patching-Tutorials.md">
         <toc-element topic="Simple-Part-Patching-Tutorials.md"/>
@@ -21,4 +23,15 @@
         <toc-element topic="Part-Module-References.md"/>
     </toc-element>
     <toc-element topic="Resource-Reference.md"/>
+    <toc-element topic="Builtin-Library-Reference.md">
+        <toc-element topic="builtin-debug.md"/>
+        <toc-element topic="builtin-dictionary.md"/>
+        <toc-element topic="builtin-functional.md"/>
+        <toc-element topic="builtin-list.md"/>
+        <toc-element topic="builtin-math.md"/>
+        <toc-element topic="builtin-meta.md"/>
+        <toc-element topic="builtin-reflection.md"/>
+        <toc-element topic="builtin-string.md"/>
+        <toc-element topic="builtin-type-conversion.md"/>
+    </toc-element>
 </instance-profile>

@@ -14,4 +14,8 @@
         <description>Created after removal of "Reference" from Help Instance</description>
         <accepts>Reference.html</accepts>
     </rule>
+    <rule id="399efc09">
+        <description>Created after removal of "Basic Syntax Tutorials" from Help Instance</description>
+        <accepts>Basic-Syntax-Tutorials.html</accepts>
+    </rule>
 </rules>
