@@ -136,6 +136,23 @@ assigned to.
 There is actually one more value type that is considerably more advanced called a `closure` explained within the
 [Functions and Closures](Functions.md) page.
 
+### Truthiness
+Even though there is a specific `bool` type that already exists, every value has a measure called truthiness, which
+describes how close to acting as a `true` boolean value it is, if a value is acting as such it is called truthy, 
+otherwise it is called falsy or not truthy. The following table describes the criteria for truthiness for each type of value
+
+| Value Type   | Criteria for Truthiness                |
+|--------------|----------------------------------------|
+| `none`       | Values of this type are always falsy   |
+| `bool`       | `true` is truthy, `false` is falsy     |
+| `integer`    | Values of this type are always truthy  |
+| `real`       | Values of this type are always truthy  |
+| `string`     | Values of this type are always truthy  |
+| `list`       | Values of this type are always truthy  |
+| `dictionary` | Values of this type are always truthy  |
+| `deletion`   | Values of this type are always falsy   |
+
+
 ## Variables
 
 Variables are the primary way to store data outside of objects, and access preexisting data as is the case with implicit
@@ -172,12 +189,183 @@ To better explain it, here are a few example usages
 ### User Defined Variables
 User defined variables are variables usually defined as such `$identifier: [expression];`, where they can later be
 referred to by `$identifier`. And now is a perfect time to go over the rules for identifiers. Identifiers are a sequence
-of characters that can start with `a-z`, `A-Z`, and `_`, and then can be followed by those characters and also `0-9` and
-`-`. So `_xyz-0-1-234` is a valid identifier but `9rt-g` is not.
+of characters that can start with `a-z`, `A-Z`, and `_`, and then can be followed by those characters and also `0-9`, `.`
+and `-`. So `_xyz-0-1-23.4` is a valid identifier but `9rt-g` is not.
 
 ## Expressions
+Now that you have learned how to express and store/access data, the last thing you need to learn is how to modify data
+and combine it with other pieces of data. The way to do this, is expressions, which are essentially a sequence of operations
+that can be done on data, like the mathematical concept of an expression. The individual components that describe the
+actions being done are called operators, and the expressions being used with these operators are called operands.
 
+### Foreword: Prefix Expressions { collapsible="true" default-state="expanded" }
+A foreword before going into expressions, certain operators (i.e. `+`, `-`, `*`, and `/`) that are typically binary, can
+be used without a left hand expression if they are the leftmost operator in a field-setting selection action, in this 
+case, they are treated as the left hand expression being `$value`, which allows for easy expression of simple actions
+such as scaling a value and what not.
+An example of this usage is
+```
+:parts #wheel_0v_rover {
+    mass: *5;
+}
+```
+where the `*` is a prefix operator, and this means multiply the mass by 5, as `$value` is equal to the current value of
+the mass. If you are familiar with other programming languages, this is basically how to represent `+=`, `-=`, `*=`, and
+`/=` for fields.
 
-### Prefix Expressions
+But as for the reason that this is in the foreword, and this is important, is that if you want to set a field to a value
+that is a negative number, **ALWAYS** wrap it in `()` like as follows
 
+```
+:parts #wheel_0v_rover {
+    mass: (-5);
+}
+```
 
+> If you do not wrap your negative values in parentheses, it will be treated like a prefixed subtraction operation
+> 
+{style="warning"}
+
+### Values and Variables as expressions
+With the foreword out of the way, the simplest type of expression has already been described, values and variable
+references.
+
+```
+$result: 5; // A value of 5 as an expression
+$result-a: $result; // Using the variable $result as an expression
+```
+
+### Unary Prefix Operators
+There are 3 unary prefix expressions: `not`, `+`, and `-`, a unary prefix operator means that the operator is placed directly
+to the left of the expression that it is being operated upon, example being `-$something`
+
+#### +
+This operator actually is the equivalent of doing nothing, it multiplies its operand by `+1`
+Example:
+```
+$result-c: +$result-b; // Essentially sets $result-c to $result-b (5)
+```
+
+#### -
+This operator multiplies its operand by `-1`
+Example:
+```
+$result-d: -$result-c; // Sets $result-d to $result-b multiplied by -1 (-5)
+```
+
+#### not
+This operator returns `false` if its operand resolves to a value being <tooltip term="truthy">truthy</tooltip>,
+otherwise it returns `true`.
+
+Example:
+```
+$result-e: not true; // Set to false as true is truthy
+$result-f: not $result-e; // Set to true as $result-e being false is not truthy 
+```
+
+### Binary Numeric Operators
+
+Binary numeric operators, are operators that usually (but not always) operate on numbers, and are placed as an infix 
+between the 2 expressions making up their operand
+
+#### +
+This operator results in the value of its 2 operands added together, when used on operands that are numbers 
+(`integer`/`real`), and if either operand is a `real` it will return a `real` otherwise it returns an `integer`
+```
+$a: 5;
+$b: $a+5; // Results in 10, as 5+5 is 10
+```
+This operator can also have different results depending on the other operands it has.
+These results are defined in the following sections, any combination not described will throw an error.
+##### string + string
+If the operands to `+` are strings, then this will concatenate the 2 strings, that is put them together end to end creating
+a new string.
+```
+$a: "Hello";
+$b: "World";
+$c: $a+$b; // Becomes "HelloWorld"
+```
+
+##### list + list
+If the operands to `+` are lists, then this will append all values of the righthand list to the lefthand list creating
+a new list.
+```
+$a: [1,2,3];
+$b: [7,8,9];
+$c: $a+$b; // Becomes [1,2,3,7,8,9]
+```
+
+#### -
+This operator results in the value of its right hand operand subtracted from the value of its left hand operand, when used on 
+operands that are numbers (`integer`/`real`), and if either operand is a `real` it will return a `real` otherwise it 
+returns an `integer`.
+```
+$a: 10;
+$b: $a-11; // Becomes -1 as 10 - 11 is -1
+```
+When used on any other data types, it will throw an error.
+
+#### *
+This operator results in the value of its 2 operands multiplied, when used on
+operands that are numbers (`integer`/`real`), and if either operand is a `real` it will return a `real` otherwise it
+returns an `integer`.
+```
+$a: 10;
+$b: $a * 10; // Becomes 100 as 10 * 10 is 100
+```
+This operator can also have different results depending on the other operands it has.
+These results are defined in the following sections, any combination not described will throw an error.
+
+##### string * integer and integer * string
+When you use the `*` operator to multiply a string and an integer or vice versa, the result is the string repeated by
+an amount that is the value of the integer.
+```
+$a: "hi";
+$b: "hi"*3; // "hihihi"
+```
+
+##### list * integer and integer * list
+Similar to the above, the result of multiplying a string and a list is the list repeated by an amount that is the value
+of the integer.
+```
+$a: [1];
+$b: $a*10; // [1,1,1,1,1,1,1,1,1,1]
+```
+
+#### /
+This operator results in the value of its left hand operand divided by the value of its right hand operand, when used on
+operands that are numbers (`integer`/`real`), and if either operand is a `real` it will return a `real` otherwise it
+returns an `integer`.
+```
+$a: 10;
+$b: $a/2; // Becomes 5 as 10 / 2 is 5
+```
+When used on any other data types, it will throw an error.
+#### %
+This operator results in the the remainder of the division of the value of its left hand by the value of its right hand 
+operand when used on operands that are numbers (`integer`/`real`), and if either operand is a `real` it will return a 
+`real` otherwise it returns an `integer`.
+```
+$a: 10;
+$b: $a%3; // Becomes 1 as the remainder of 10/3 is 1
+```
+When used on any other data types, it will throw an error.
+
+### Binary Equality Operators
+
+### Binary Relational Operators
+
+### Binary Boolean Operators
+
+### Subscript Operator
+
+### Ternary Operator
+
+### Other Operators
+
+There are a few other operators not described here that are described within the [Functions and Closures](Functions.md) 
+page.
+
+### Combining Expressions
+
+## What next
