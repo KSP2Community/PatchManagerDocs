@@ -13,7 +13,5 @@ Patch File
 
 Patch
 : A patch is a singular group of modifications contained in a patch file, usually corresponding to the top level blocks.
-Used as a verb instead it is the process of applying those modifications to an object. 
+Used as a verb instead it is the process of applying those modifications to an object.
 
-Selector
-: A selector is a filter for a patch that is used to narrow down what exactly is being patched

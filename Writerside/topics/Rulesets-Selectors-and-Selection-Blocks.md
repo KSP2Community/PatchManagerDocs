@@ -45,7 +45,7 @@ and as such it pulls in every single part object to be filtered through the rest
 | Without Name Selector     | `~#xyz`   | Does the exact opposite of the name selector                                                                                                        |
 | Element Selector          | `xyz`     | Matches a field (usually used in the child selector construct)                                                                                      |
 | Class Selector            | `.xyz`    | Matches objects that have a certain class in their class list (depends on the ruleset but a lot of the time just a list of fieldnames)              |
-| Class Capture Selector    | `.xyz:[]` | (Advanced) matches objects that have a certain class and capture variables from the object that class refers to inside the `[]`                     |
+| Class Capture Selector    | `.xyz:[]` | Similar to a class selector, with some more advanced semantics explained within the [Class Capture Selector](Class-Capture-Selector.md) page        |
 | Without Class Selector    | `~.xyz`   | Matches all objects that do not have a certain class                                                                                                |
 | Child Selector            | `*>Field` | Grabs all the children of every object from the lefthandside selector and filters those children through the righthandside selector                 |
 | Element Addition Selector | `+xyz`    | Adds an element to every object going through the selector and selects that element                                                                 |

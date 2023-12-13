@@ -18,4 +18,8 @@
         <description>Created after removal of "Basic Syntax Tutorials" from Help Instance</description>
         <accepts>Basic-Syntax-Tutorials.html</accepts>
     </rule>
+    <rule id="2d398f46">
+        <description>Created after removal of "This is the first topic" from Help Instance</description>
+        <accepts>Default-topic.html</accepts>
+    </rule>
 </rules>

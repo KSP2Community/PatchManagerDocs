@@ -9,4 +9,8 @@ These tutorials are here to help you understand the absolute basics of Patch Man
 - [Rulesets, Selectors, and Selection Blocks](Rulesets-Selectors-and-Selection-Blocks.md) explains the most fundamental
 construct that Patch Manager has.
 - [Selection Actions](Selection-Actions.md) explains what actions can be taken within that most fundamental construct.
-- 
+- [Values, Variables, and Expressions](Values-Variables-and-Expressions.md) explains ways to express and manipulate data
+within Patch Manager.
+
+## Advanced Syntax Tutorials
+- [Mixins](Mixins.md) explains a useful way to template common patches with arguments.
