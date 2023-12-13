@@ -13,6 +13,9 @@
         <toc-element topic="Selection-Actions.md">
         </toc-element>
         <toc-element topic="Values-Variables-and-Expressions.md"/>
+        <toc-element topic="Top-Level-Statements.md"/>
+        <toc-element topic="Libraries.md"/>
+        <toc-element topic="Selection-Block-Attributes.md"/>
         <toc-element topic="Class-Capture-Selector.md"/>
         <toc-element topic="Mixins.md"/>
         <toc-element topic="Functions.md"/>
@@ -38,5 +41,7 @@
         <toc-element topic="builtin-reflection.md"/>
         <toc-element topic="builtin-string.md"/>
         <toc-element topic="builtin-type-conversion.md"/>
+        <toc-element topic="builtin-config.md"/>
+        <toc-element topic="builtin-parts.md"/>
     </toc-element>
 </instance-profile>

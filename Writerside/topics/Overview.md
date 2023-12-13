@@ -2,11 +2,10 @@
 
 ## What is Patch Manager
 
-Provide some background and context, explain choices and alternatives.
+Patch Manager is a tool for patching and creating json files in the Addressables database of Kerbal Space Program 2,
+using a custom language for patching that is described in this documentation.
 
 ## Glossary
-
-Here is an overview of common terms that will be used.
 
 Patch File
 : A file that ends in `.patch` that contains the patch programs that patch manager uses
