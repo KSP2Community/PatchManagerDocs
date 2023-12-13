@@ -1,3 +1,3 @@
-# How to Use the Stage System
+# Stages
 
 Start typing here...

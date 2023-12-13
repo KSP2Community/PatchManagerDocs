@@ -26,3 +26,5 @@ These tutorials provide explanations of the more advanced syntax constructs with
 how to use the builtin ones as well
 - [Class Capture Selector](Class-Capture-Selector.md) explains the most advanced of the selectors that was left out of
 the page on selectors in the basic section, but arguably one of the most powerful ones.
+- [Stages](How-to-Use-the-Stage-System.md) goes over one of the more useful tools for cross-mod patching, the stage system
+it also goes over how you should set up your mods stages for the most effectiveness.
