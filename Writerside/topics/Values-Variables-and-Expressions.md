@@ -352,20 +352,137 @@ $b: $a%3; // Becomes 1 as the remainder of 10/3 is 1
 When used on any other data types, it will throw an error.
 
 ### Binary Equality Operators
+Binary equality operators are used to compare the equality of 2 values, and there are 2 of them `==` and `!=`, they can
+be used on values of any type, but both sides must be the same type or the values will be considered to not be equal.
+
+When used on lists it compares member wise if each value is equal, and when on dictionaries, it compares if they have
+the same keys, and then keywise if each value is equal.
+
+`==` will return true when the operands are equal, and otherwise false
+
+`!=` will return false when the operands are equal, and otherwise true
+
+A few examples of this behaviour are as follows:
+```
+$a: 5 == 3; // false, as 5 does not equal 3
+$b: 5 == 5; // true, as 5 does equal 5
+$c: 5 != 5.0; // true, as 5 does not equal 5.0 (mismatched types)
+$d: "hello" == "hello"; // true, as the 2 strings are the same
+$e: [1,2] != [1]; // true, as even though the first member is the same, the length is different
+$f: [1,2,3] == [1,2,3]; // true, as every member is the same memberwise
+$g: {a:5,b:6} == {a:5,b:6,c:7} // false, as even though a and b are the same in both, the righthand side has a key called 'c'
+$h: {a:1,b:2} == {a:1,b:2} // true, they both have keys a and b, and the values in those keys are the same
+```
 
 ### Binary Relational Operators
+Binary relational operators are operators only used on the numeric types that compare the relations of the numbers,
+there are four relation operators that do the following things
+
+\<
+: results in true if the left operand's value is less than that of the right operand's value
+: example: `5 < 3` results in false, while `3 < 5` results in true
+
+\<=
+: results in true if the left operand's value is less than or equal to that of the right operand's value
+: example: `4 <= 5` and `5 <= 5` both result in true, while `5 <= 4` results in false
+
+\>
+: results in true if the left operand's value is greater than that of the right operand's value
+: example: `5 > 3` results in true, while `3 > 5` results in false
+
+\>=
+: results in true if the left operand's value is greater than or equal to that of the right operand's value
+: example: `5 >= 4` and `5 >= 5` both result in true, while `4 >= 5` results in false
 
 ### Binary Boolean Operators
 
+Binary boolean operators are operators that operate on the truthiness of their operands, there are 2 of these operators
+
+and
+: this operator results in true if both of its operands are truthy, otherwise false, it short circuits such that if the
+first operand results in a falsy value, it doesn't evaluate the second operand
+: example: `(1 > 2) and true` results in false, while `(1 < 2) and (1 == 1)` results in true
+
+or
+: this operator results in true if either of its operands are truthy, otherwise false, it short circuits such that if the
+first operand results in a truthy value, it doesn't evaluate the second operand
+: example: `(1 > 2) or true` results in true, while `(1 > 2) or (5 <= 4)` results in false
+
 ### Subscript Operator
 
+The subscript operator is how you get individual values from maps and lists, it is a `[...]` postfixed after the map/list
+you want to retrieve a value from, with the `...` replaced by the index, which for lists is any expression that results
+in a number that is at least zero, as lists are zero indexed (meaning `0` is the first index in a list), and for maps, 
+its any expression that results in a string, that becomes the key you want to retrieve a value from. For a few examples:
+
+```
+$map: {
+    a: 1,
+    b: 2,
+    c: 3
+};
+$list: [1,2,3,4,5];
+
+$key-1: "b";
+$key-2: 4;
+$test-1: $map["a"]; // This results in 1
+$test-2: $map[$key-1]; // this results in 2, as the map at "b" is 2
+$test-3: $list[0]; // This results in 1 as the list is zero indexed
+$test-4: $list[$key-2]; // This results in 5, as again the list is zero indexed, and the value at the 4th index is 5
+```
+
+> If you use any index that is past either end of a list, or not a key in a map, it will cause an error
+> 
+{style="warning"}
 ### Ternary Operator
+
+The ternary operator is a special 3 operand operator that looks like this `[a] @if [condition] @else [b]`, where it will
+evaluate the truthiness of `[condition]` and if it is truthy it will evaluate and result in `[a]` otherwise it will
+evaluate and result in `[b]`. Or for a better example:
+```
+$a: 5;
+$b: 3;
+$min: $a @if $a < $b @else $b; Results in 3 as a is not less than b, and in general this will always result in the minimum
+value between $a and $b
+```
 
 ### Other Operators
 
-There are a few other operators not described here that are described within the [Functions and Closures](Functions.md) 
+There are a few other operators not described here that are described within the advanced [Functions and Closures](Functions.md) 
 page.
 
 ### Combining Expressions
+As you may have picked up from the previous sections, you can combine expressions using the operands, and you may have
+noticed that in some places parentheses are being used to wrap the expressions. This is because of operator precedence.
+Where the operators higher up on the list of precedence more tightly group than those below, like `*` more tightly groups
+than `+`, so in the case of `5 + 3 * 4`, this is interpreted as `5 + (3*4)` rather than `(5+3)*4`, as such you can use
+parentheses to change how precedence works. The list of precedence from the highest precedence to the lowest precedence
+is as follows:
+
+1. Values/Variables
+2. `()`
+3. Unary Prefix `-`
+4. Unary Prefix `+`
+5. Unary Prefix `not`
+6. Simple function call (described in [Functions and Closures](Functions.md))
+7. Member function call (described in [Functions and Closures](Functions.md))
+8. `[]` subscript
+9. `*`
+10. `/`
+11. `%`
+12. `+`
+13. `-`
+14. `>`
+15. `<`
+16. `>=`
+17. `<=`
+18. `==`
+19. `!=`
+20. `and`
+21. `or`
+22. `@if`/`@else`
 
 ## What next
+With the conclusion of this page, you have completed the basic syntax tutorials, and can either start with the
+[Part Patching Tutorials](Part-Patching-Tutorials.md), or continue with learning the syntax under the intermediate section
+of the [General Syntax Tutorials](General-Syntax-Tutorials.md). 
