@@ -15,7 +15,7 @@ Patch Manager defines a list of these stages implicitly, with 2 for each mod in 
 ## Defining Custom Stages
 
 Patch Manager also allows you to define custom stages, with their own relations to other stages. There are 3 different
-forms for this.
+forms for this. It is recommended to split up separate concepts from your patches into separate stages.
 
 > To maintain ordering across patch files in your mod for stages, it is recommended to define all your stages in a 
 > `stages.patch` file in your mods `patches/` folder, as otherwise the ordering of mod implicit or global implicit stages
