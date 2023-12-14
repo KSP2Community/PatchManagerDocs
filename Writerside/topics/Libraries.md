@@ -64,6 +64,8 @@ An example of using the library described earlier from another mod is as follows
 $tau: $example-CONSTANT_B * 2; // Define tau as 2 pi, where pi is defined in the library.
 ```
 
+If you want to use every library from a mod you can do `@use "mod_id:*"`
+
 ## Using Builtin Libraries
 
 Using builtin libraries is exactly the same as using libraries from other mods, except the prefix is `builtin:`.
@@ -79,3 +81,5 @@ $half-pi: $PI/2; // Defines half-pi as pi/2
 > unprefixed names, such as `$PI`, `$TAU`, `$E` in the case of `builtin:math`
 > 
 {style="warning"}
+
+Similary to using libraries from other mods, if you wish to use every builtin, you can do `@use "builtin:*"`

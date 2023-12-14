@@ -1,3 +1,86 @@
 # Mixins
 
-Start typing here...
+Mixins are a simple way of preventing yourself from repeating the same pattern over and over in your patches.
+They are quite simple to declare, and to use.
+
+## Declaring a mixin
+
+Mixins are declared using the `@mixin` top level state followed by the name of the mixin, and then an `(`, an optional
+list of mixin parameters, followed by a `)` and then a `{` and then any amount of [Selection Actions](Selection-Actions.md).
+then a `}`.
+
+For a very simple mixin declaration with no parameters:
+
+```
+@mixin scale-mass-by-two() {
+    mass: *2;
+}
+```
+
+### Mixin Parameters
+
+As mentioned before, mixins can have parameters, they are a comma separated list of `$parameter-name`, with optional
+default values, which then make them of the form `$parameter-name:[default-value]`.
+
+Here are a few examples of the above:
+
+```
+// Mixin with one parameter
+@mixin scale-mass-by($N) {
+    mass: *$N;
+}
+// Mixin with one default parameter
+@mixin scale-max-temp-by($N:2) {
+    maxTemp: *$N;
+}
+// Mixin with 2 parameters, one default
+@mixin scale-mass-by-and-max-temp-by($mass-scale,$temp-scale:$mass-scale) {
+    mass: *$mass-scale;
+    maxTemp: *$temp-scale;
+}
+```
+
+As you can see with the last one, the default values of parameters can depend on previous parameters, as default parameters
+are computed from left to right at inclusion time.
+
+## Using Mixins
+
+Now that you have declared mixins, you need to be able to include them into your selection blocks, using the following
+construct: `@include mixin-name([parameters])`, the parameters are a comma separated list of values corresponding to
+the parameters defined in the mixin declaration, but they can also be named in the form of `$parameter-name:[passed-value]`.
+
+What including a mixin does, is essentially copy and paste all the selection actions declared within the mixin into your
+selection block in a sub environment, and replace the parameters in the mixin with the values you passed.
+
+Here are a few examples of including the mixins defined above:
+
+```
+
+:parts #wheel_0v_rover {
+    @include scale-mass-by-two(); // Scale the mass by 2 using the parameterless mixin
+    @include scale-max-temp-by(); // Scale the max temp by 2, as the default value of $N is 2
+}
+
+:parts #wheel_1v_rover {
+    @include scale-mass-by(2); // Scale the mass by 2 using the parameterized mixin
+    @include scale-max-temp-by($N:2); // Scale the max temp by 2, and explicitly name the argument
+}
+
+:parts #wheel_2v_rover {
+    @include scale-mass-by-and-max-temp-by(2); // Scale the mass by 2, and the max temp by 2 as the $temp-scale is equal to $mass-scale by default
+}
+
+:parts #wheel_2v_rover_rugged {
+    @include scale-mass-by-and-max-temp-by(2,4); // Scale the mass by 2, and the max temp by 4
+}
+
+:parts #wheel_3v_rover {
+    @include scale-mass-by-and-max-temp-by($temp-scale:4,$mass-scale:2); // Scale the mass by 2, and the max temp by 4, passing the parameters in reverse
+}
+```
+
+
+> Due to mixins copying the selection actions into a sub environment, any variables you declare in a mixin will only
+> be available in the mixin, and not in the outer selection block.
+> 
+{style="warning"}
