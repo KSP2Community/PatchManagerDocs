@@ -190,7 +190,8 @@ To better explain it, here are a few example usages
 User defined variables are variables usually defined as such `$identifier: [expression];`, where they can later be
 referred to by `$identifier`. And now is a perfect time to go over the rules for identifiers. Identifiers are a sequence
 of characters that can start with `a-z`, `A-Z`, and `_`, and then can be followed by those characters and also `0-9`, `.`
-and `-`. So `_xyz-0-1-23.4` is a valid identifier but `9rt-g` is not.
+and `-`. `-` may not be the last character of an identifier, and it can only be followed by `a-z` and `A-Z`. 
+So `_xyz-f0-f1-f23.4` is a valid identifier but `9rt-g` is not.
 
 ## Expressions
 Now that you have learned how to express and store/access data, the last thing you need to learn is how to modify data
@@ -303,11 +304,6 @@ returns an `integer`.
 $a: 10;
 $b: $a - 11; // Becomes -1 as 10 - 11 is -1
 ```
-> When using `-` or any operator for that matter, you should put a space between the operands, as variable names can have
-> `-` in them, therefore if you did `$a-11` instead of `$a - 11` it would treat it as referencing an unknown variable
-> named "a-11" rather than your intended subtraction.
-> 
-{ style="warning" }
 
 When used on any other data types, it will throw an error.
 
