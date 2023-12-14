@@ -20,9 +20,10 @@
         <toc-element topic="Functions.md"/>
         <toc-element topic="Class-Capture-Selector.md"/>
         <toc-element topic="How-to-Use-the-Stage-System.md"/>
+        <toc-element topic="Config.md"/>
     </toc-element>
     <toc-element topic="Part-Patching-Tutorials.md">
-        <toc-element topic="Simple-Part-Patching-Tutorials.md"/>
+        <toc-element topic="Making-Your-Part-Patches-More-Moddable-Using-Configs.md"/>
     </toc-element>
     <toc-element topic="Resource-Patching-Tutorials.md"/>
     <toc-element topic="Generic-Patching-Tutorials.md"/>

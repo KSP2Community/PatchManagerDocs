@@ -20,7 +20,7 @@ For a very simple mixin declaration with no parameters:
 ### Mixin Parameters
 
 As mentioned before, mixins can have parameters, they are a comma separated list of `$parameter-name`, with optional
-default values, which then make them of the form `$parameter-name:[default-value]`.
+default values, which then make them of the form `$parameter-name:[default-value-expression]`.
 
 Here are a few examples of the above:
 
@@ -40,8 +40,10 @@ Here are a few examples of the above:
 }
 ```
 
-As you can see with the last one, the default values of parameters can depend on previous parameters, as default parameters
-are computed from left to right at inclusion time.
+> The default values for mixin parameters can depend on previous parameters, as when computing the value of parameters
+> the computation is done from left to right.
+> 
+{style="note"}
 
 ## Using Mixins
 

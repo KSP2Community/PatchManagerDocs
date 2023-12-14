@@ -28,3 +28,4 @@ how to use the builtin ones as well
 the page on selectors in the basic section, but arguably one of the most powerful ones.
 - [Stages](How-to-Use-the-Stage-System.md) goes over one of the more useful tools for cross-mod patching, the stage system
 it also goes over how you should set up your mods stages for the most effectiveness.
+- [Configs](Config.md) goes over the best way to make your mod's patches interoperable with other mods.
