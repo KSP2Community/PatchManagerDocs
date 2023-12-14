@@ -273,7 +273,7 @@ This operator results in the value of its 2 operands added together, when used o
 (`integer`/`real`), and if either operand is a `real` it will return a `real` otherwise it returns an `integer`
 ```
 $a: 5;
-$b: $a+5; // Results in 10, as 5+5 is 10
+$b: $a + 5; // Results in 10, as 5+5 is 10
 ```
 This operator can also have different results depending on the other operands it has.
 These results are defined in the following sections, any combination not described will throw an error.
@@ -283,7 +283,7 @@ a new string.
 ```
 $a: "Hello";
 $b: "World";
-$c: $a+$b; // Becomes "HelloWorld"
+$c: $a + $b; // Becomes "HelloWorld"
 ```
 
 ##### list + list
@@ -292,7 +292,7 @@ a new list.
 ```
 $a: [1,2,3];
 $b: [7,8,9];
-$c: $a+$b; // Becomes [1,2,3,7,8,9]
+$c: $a + $b; // Becomes [1,2,3,7,8,9]
 ```
 
 #### -
@@ -301,9 +301,16 @@ operands that are numbers (`integer`/`real`), and if either operand is a `real` 
 returns an `integer`.
 ```
 $a: 10;
-$b: $a-11; // Becomes -1 as 10 - 11 is -1
+$b: $a - 11; // Becomes -1 as 10 - 11 is -1
 ```
+> When using `-` or any operator for that matter, you should put a space between the operands, as variable names can have
+> `-` in them, therefore if you did `$a-11` instead of `$a - 11` it would treat it as referencing an unknown variable
+> named "a-11" rather than your intended subtraction.
+> 
+{ style="warning" }
+
 When used on any other data types, it will throw an error.
+
 
 #### *
 This operator results in the value of its 2 operands multiplied, when used on
@@ -321,7 +328,7 @@ When you use the `*` operator to multiply a string and an integer or vice versa,
 an amount that is the value of the integer.
 ```
 $a: "hi";
-$b: "hi"*3; // "hihihi"
+$b: "hi" * 3; // "hihihi"
 ```
 
 ##### list * integer and integer * list
@@ -329,7 +336,7 @@ Similar to the above, the result of multiplying a string and a list is the list 
 of the integer.
 ```
 $a: [1];
-$b: $a*10; // [1,1,1,1,1,1,1,1,1,1]
+$b: $a * 10; // [1,1,1,1,1,1,1,1,1,1]
 ```
 
 #### /
@@ -338,7 +345,7 @@ operands that are numbers (`integer`/`real`), and if either operand is a `real` 
 returns an `integer`.
 ```
 $a: 10;
-$b: $a/2; // Becomes 5 as 10 / 2 is 5
+$b: $a / 2; // Becomes 5 as 10 / 2 is 5
 ```
 When used on any other data types, it will throw an error.
 #### %
@@ -347,7 +354,7 @@ operand when used on operands that are numbers (`integer`/`real`), and if either
 `real` otherwise it returns an `integer`.
 ```
 $a: 10;
-$b: $a%3; // Becomes 1 as the remainder of 10/3 is 1
+$b: $a % 3; // Becomes 1 as the remainder of 10/3 is 1
 ```
 When used on any other data types, it will throw an error.
 
