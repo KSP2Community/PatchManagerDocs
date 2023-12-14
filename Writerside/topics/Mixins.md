@@ -50,7 +50,7 @@ construct: `@include mixin-name([parameters])`, the parameters are a comma separ
 the parameters defined in the mixin declaration, but they can also be named in the form of `$parameter-name:[passed-value]`.
 
 What including a mixin does, is essentially copy and paste all the selection actions declared within the mixin into your
-selection block in a sub environment, and replace the parameters in the mixin with the values you passed.
+selection block in a sub environment (as in similar to a `* {...}` selection block), and replace the parameters in the mixin with the values you passed.
 
 Here are a few examples of including the mixins defined above:
 
