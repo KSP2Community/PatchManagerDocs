@@ -1,6 +1,11 @@
 # Stages
 <show-structure for="chapter,procedure" depth="2"/>
 
+> This is going to be added in Patch Manager 0.5.0, it is currently not out
+> 
+{style="note"}
+
+
 Patch Manager implicitly orders your patches into something called "stages", which are distinct temporal steps for when
 your patch will run in relation to others. A stage is essentially a name, with a list of relations to their location in
 time compared to other stages, either "before" certain stages, or "after" other stages.

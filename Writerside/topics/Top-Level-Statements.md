@@ -98,3 +98,23 @@ this by writing `@patch` followed by a comma separated list of strings and a sem
 > Do not unnecessarily patch labels, the more labels that are patched, the slower patch manager will run on startups where it has to rebuild its cache.
 > 
 {style="warning"}
+
+## Declare Configs
+
+You can declare configs as a top level statement, configs are described in [Configs](Config.md), which is an advanced tutorial.
+
+For an example config declaration:
+
+```
+@create-config "ls-constants", "day-length": 21600;
+```
+
+## Update configs
+
+You can also update configs as a top level statement.
+
+For an example of this:
+
+```
+@update-config 0, "ls-constants", "ls-day-length": 86400;
+```

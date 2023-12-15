@@ -26,4 +26,10 @@
         <description>Created after removal of "Simple Part Patching Tutorials" from Patch Manager</description>
         <accepts>Simple-Part-Patching-Tutorials.html</accepts>
     </rule>
+    <rule id="5d9898fe">
+        <description>Created after removal of "Making Your Part Patches More Moddable Using Configs" from Patch
+            Manager
+        </description>
+        <accepts>Making-Your-Part-Patches-More-Moddable-Using-Configs.html</accepts>
+    </rule>
 </rules>

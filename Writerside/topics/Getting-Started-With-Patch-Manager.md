@@ -118,6 +118,7 @@ Depending on your answer to the prior question, there are multiple ways to set u
                 swinfo.json
                 patches/
                     libraries/
+                    configs/
             </code-block>
         </chapter>
         <chapter title="swinfo.json setup" collapsible="true" default-state="expanded">
