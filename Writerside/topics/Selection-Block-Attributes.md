@@ -44,13 +44,17 @@ the selection block it is attached to.
 
 | Ruleset      | Argument names        | Description of behaviour                                                                            |
 |--------------|-----------------------|-----------------------------------------------------------------------------------------------------|
-| `:parts`     | No arguments          | Part creation is not possible yet in Patch Manager                                                  |
+| `:parts`     | `name`                | Creates a new part asset of the name "name"                                                         |
 | `:resources` | `name`, `[is_recipe]` | Creates a new resource with "name", this resource is a recipe if `is_recipe` is passed and is true. |
 | `:json`      | `label`, `name`       | Creates a new generic json asset in Addressables with the label `label`, and name `name`.           |
 
 > Optional arguments are surrounded by `[]`
 > 
 {style="note"}
+
+> If you create a part without its prefab in Addressables, the game will crash.
+> 
+{style="warning"}
 
 Examples:
 
