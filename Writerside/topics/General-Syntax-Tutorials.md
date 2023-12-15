@@ -1,4 +1,4 @@
-# General Syntax Tutorials
+# Syntax Reference
 
 You may want to get straight into patch manager patching, which is fine, in that case you can skip ahead to the
 [Part Patching Tutorials](Part-Patching-Tutorials.md), but it is highly recommended that you understand at least the

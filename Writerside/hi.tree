@@ -26,7 +26,6 @@
     </toc-element>
     <toc-element topic="Resource-Patching-Tutorials.md"/>
     <toc-element topic="Generic-Patching-Tutorials.md"/>
-    <toc-element topic="Syntax-Reference.md"/>
     <toc-element topic="Part-Reference.md">
         <toc-element topic="Part-Module-References.md"/>
     </toc-element>

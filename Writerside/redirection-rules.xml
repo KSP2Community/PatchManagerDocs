@@ -32,4 +32,8 @@
         </description>
         <accepts>Making-Your-Part-Patches-More-Moddable-Using-Configs.html</accepts>
     </rule>
+    <rule id="2d29d513">
+        <description>Created after removal of "Syntax Reference" from Patch Manager</description>
+        <accepts>Syntax-Reference.html</accepts>
+    </rule>
 </rules>

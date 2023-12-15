@@ -1,3 +1,0 @@
-# Syntax Reference
-
-Start typing here...
