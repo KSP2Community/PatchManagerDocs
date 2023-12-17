@@ -14,7 +14,8 @@
         </toc-element>
         <toc-element topic="Values-Variables-and-Expressions.md"/>
         <toc-element topic="Top-Level-Statements.md"/>
-        <toc-element topic="Libraries.md"/>
+        <toc-element topic="Libraries.md">
+        </toc-element>
         <toc-element topic="Selection-Block-Attributes.md"/>
         <toc-element topic="Mixins.md"/>
         <toc-element topic="Functions.md"/>
@@ -23,163 +24,111 @@
         <toc-element topic="Config.md"/>
     </toc-element>
     <toc-element topic="Part-Patching-Tutorials.md" >
-        <toc-element topic="Module_ActiveRadiator.md">
-            <toc-element topic="Data_ActiveRadiator.md"/>
+        <toc-element topic="Part-Modules.md">
+            <toc-element topic="Module_ActiveRadiator.md"/>
+            <toc-element topic="Module_Heatsink.md"/>
+            <toc-element topic="Module_RCS.md"/>
+            <toc-element topic="Module_FuelLine.md"/>
+            <toc-element topic="Module_DataTransmitter.md"/>
+            <toc-element topic="Module_Light.md"/>
+            <toc-element topic="Module_Kerbal.md"/>
+            <toc-element topic="Module_SolarPanel.md">\</toc-element>
+            <toc-element topic="Module_Founder.md"/>
+            <toc-element topic="Module_Decouple.md"/>
+            <toc-element topic="Module_WheelBrakes.md"/>
+            <toc-element topic="Module_Color.md"/>
+            <toc-element topic="Module_WheelMotor.md"/>
+            <toc-element topic="Module_Convector.md"/>
+            <toc-element topic="Module_Gimbal.md"/>
+            <toc-element topic="Module_CompoundPart.md"/>
+            <toc-element topic="Module_WheelBogey.md"/>
+            <toc-element topic="Module_Engine.md"/>
+            <toc-element topic="Module_WheelMotorSteering.md"/>
+            <toc-element topic="Module_LiftingSurface.md"/>
+            <toc-element topic="Module_ReactionWheel.md"/>
+            <toc-element topic="Module_WheelDamage.md"/>
+            <toc-element topic="Module_WheelSteering.md"/>
+            <toc-element topic="Module_ToggleCrossfeed.md"/>
+            <toc-element topic="Module_LitPart.md"/>
+            <toc-element topic="Module_Drag.md"/>
+            <toc-element topic="Module_CrewedInterior.md"/>
+            <toc-element topic="Module_Strut.md"/>
+            <toc-element topic="Module_Deployable.md"/>
+            <toc-element topic="Module_ProceduralPart.md"/>
+            <toc-element topic="Module_Command.md"/>
+            <toc-element topic="Module_Generator.md"/>
+            <toc-element topic="Module_ResourceIntake.md"/>
+            <toc-element topic="Module_Heatshield.md"/>
+            <toc-element topic="Module_Gantry.md"/>
+            <toc-element topic="Module_ReinforcedConnection.md"/>
+            <toc-element topic="Module_ControlSurface.md"/>
+            <toc-element topic="Module_WheelLock.md"/>
+            <toc-element topic="Module_WheelBase.md"/>
+            <toc-element topic="Module_CargoBay.md"/>
+            <toc-element topic="Module_ResourceConverter.md"/>
+            <toc-element topic="Module_ResourceCapacities.md"/>
+            <toc-element topic="Module_DockingNode.md"/>
+            <toc-element topic="Module_WheelSuspension.md"/>
+            <toc-element topic="Module_ScienceExperiment.md"/>
+            <toc-element topic="Module_Fairing.md"/>
+            <toc-element topic="Module_StatusLight.md"/>
+            <toc-element topic="Module_GroundLaunchClamp.md"/>
+            <toc-element topic="Module_Cooler.md"/>
+            <toc-element topic="Module_Parachute.md"/>
+            <toc-element topic="Data_Gantry.md"/>
+        </toc-element>
+        <toc-element topic="ModuleData.md">
             <toc-element topic="Data_Cooler.md"/>
-        </toc-element>
-        <toc-element topic="Module_FuelLine.md">
-            <toc-element topic="Data_FuelLine.md"/>
-        </toc-element>
-        <toc-element topic="Module_RCS.md">
-            <toc-element topic="Data_RCS.md"/>
-        </toc-element>
-        <toc-element topic="Module_Heatsink.md">
-            <toc-element topic="Data_Heatsink.md"/>
-            <toc-element topic="Data_Cooler.md"/>
-        </toc-element>
-        <toc-element topic="Module_Heatshield.md">
-            <toc-element topic="Data_Heatshield.md"/>
-        </toc-element>
-        <toc-element topic="Module_ResourceIntake.md">
-            <toc-element topic="Data_ResourceIntake.md"/>
-        </toc-element>
-        <toc-element topic="Module_Generator.md">
-            <toc-element topic="Data_ModuleGenerator.md"/>
-        </toc-element>
-        <toc-element topic="Module_Command.md">
-            <toc-element topic="Data_Command.md"/>
-        </toc-element>
-        <toc-element topic="Module_ProceduralPart.md">
-            <toc-element topic="Data_ProceduralPart.md"/>
-        </toc-element>
-        <toc-element topic="Module_Deployable.md">
-            <toc-element topic="Data_Deployable.md"/>
-        </toc-element>
-        <toc-element topic="Module_Strut.md">
-            <toc-element topic="Data_Strut.md"/>
-        </toc-element>
-        <toc-element topic="Module_CrewedInterior.md">
-            <toc-element topic="Data_CrewedInterior.md"/>
-        </toc-element>
-        <toc-element topic="Module_Drag.md">
-            <toc-element topic="Data_Drag.md"/>
-        </toc-element>
-        <toc-element topic="Module_LitPart.md">
-            <toc-element topic="Data_LitPart.md"/>
-        </toc-element>
-        <toc-element topic="Module_ToggleCrossfeed.md">
-            <toc-element topic="Data_ToggleCrossFeed.md"/>
-        </toc-element>
-        <toc-element topic="Module_WheelSteering.md">
-            <toc-element topic="Data_WheelSteering.md"/>
-        </toc-element>
-        <toc-element topic="Module_WheelDamage.md">
-            <toc-element topic="Data_WheelDamage.md"/>
-        </toc-element>
-        <toc-element topic="Module_ReactionWheel.md">
-            <toc-element topic="Data_ReactionWheel.md"/>
-        </toc-element>
-        <toc-element topic="Module_LiftingSurface.md">
-            <toc-element topic="Data_LiftingSurface.md"/>
-        </toc-element>
-        <toc-element topic="Module_WheelMotorSteering.md">
+            <toc-element topic="Data_Decouple.md"/>
+            <toc-element topic="Data_Color.md"/>
+            <toc-element topic="Data_WheelBrakes.md"/>
             <toc-element topic="Data_WheelMotor.md"/>
+            <toc-element topic="Data_ActiveRadiator.md"/>
+            <toc-element topic="Data_FuelLine.md"/>
+            <toc-element topic="Data_RCS.md"/>
+            <toc-element topic="Data_Heatsink.md"/>
+            <toc-element topic="Data_Heatshield.md"/>
+            <toc-element topic="Data_ResourceIntake.md"/>
+            <toc-element topic="Data_ModuleGenerator.md"/>
+            <toc-element topic="Data_Command.md"/>
+            <toc-element topic="Data_ProceduralPart.md"/>
+            <toc-element topic="Data_Deployable.md"/>
+            <toc-element topic="Data_CrewedInterior.md"/>
+            <toc-element topic="Data_Strut.md"/>
+            <toc-element topic="Data_Drag.md"/>
+            <toc-element topic="Data_LitPart.md"/>
+            <toc-element topic="Data_ToggleCrossFeed.md"/>
+            <toc-element topic="Data_WheelSteering.md"/>
+            <toc-element topic="Data_WheelDamage.md"/>
+            <toc-element topic="Data_ReactionWheel.md"/>
+            <toc-element topic="Data_LiftingSurface.md"/>
             <toc-element topic="Data_WheelMotorSteering.md"/>
-        </toc-element>
-        <toc-element topic="Module_Engine.md">
             <toc-element topic="Data_Engine.md">
                 <toc-element topic="EngineMode.md"/>
             </toc-element>
-        </toc-element>
-        <toc-element topic="Module_WheelBogey.md">
             <toc-element topic="Data_WheelBogey.md"/>
-        </toc-element>
-        <toc-element topic="Module_CompoundPart.md">
             <toc-element topic="Data_CompoundPart.md"/>
-        </toc-element>
-        <toc-element topic="Module_Gimbal.md">
             <toc-element topic="Data_Gimbal.md"/>
-        </toc-element>
-        <toc-element topic="Module_Convector.md">
             <toc-element topic="Data_Convector.md"/>
-            <toc-element topic="Data_Cooler.md"/>
-        </toc-element>
-        <toc-element topic="Module_WheelMotor.md">
-            <toc-element topic="Data_WheelMotor.md"/>
-        </toc-element>
-        <toc-element topic="Module_Color.md">
-            <toc-element topic="Data_Color.md"/>
-        </toc-element>
-        <toc-element topic="Module_WheelBrakes.md">
-            <toc-element topic="Data_WheelBrakes.md"/>
-        </toc-element>
-        <toc-element topic="Module_Decouple.md">
-            <toc-element topic="Data_Decouple.md"/>
-        </toc-element>
-        <toc-element topic="Module_Founder.md">
             <toc-element topic="Data_Founder.md"/>
-        </toc-element>
-        <toc-element topic="Module_SolarPanel.md">
             <toc-element topic="Data_SolarPanel.md"/>
-            <toc-element topic="Data_Deployable.md"/>
-        </toc-element>
-        <toc-element topic="Module_Kerbal.md">
             <toc-element topic="Data_Kerbal.md"/>
-        </toc-element>
-        <toc-element topic="Module_Light.md">
-            <toc-element topic="Data_Light.md"/>
-        </toc-element>
-        <toc-element topic="Module_DataTransmitter.md">
             <toc-element topic="Data_Transmitter.md"/>
-            <toc-element topic="Data_Deployable.md"/>
-        </toc-element>
-        <toc-element topic="Module_Parachute.md">
+            <toc-element topic="Data_Light.md"/>
             <toc-element topic="Data_Parachute.md"/>
-        </toc-element>
-        <toc-element topic="Module_Cooler.md">
-            <toc-element topic="Data_Cooler.md"/>
-        </toc-element>
-        <toc-element topic="Module_GroundLaunchClamp.md">
             <toc-element topic="Data_GroundLaunchClamp.md"/>
-        </toc-element>
-        <toc-element topic="Module_StatusLight.md">
             <toc-element topic="Data_StatusLight.md"/>
-        </toc-element>
-        <toc-element topic="Module_Fairing.md">
             <toc-element topic="Data_Fairing.md"/>
-        </toc-element>
-        <toc-element topic="Module_ScienceExperiment.md">
             <toc-element topic="Data_ScienceExperiment.md"/>
-        </toc-element>
-        <toc-element topic="Module_WheelSuspension.md">
             <toc-element topic="Data_WheelSuspension.md"/>
-        </toc-element>
-        <toc-element topic="Module_DockingNode.md">
             <toc-element topic="Data_DockingNode.md"/>
-        </toc-element>
-        <toc-element topic="Module_ResourceCapacities.md">
             <toc-element topic="Data_ResourceCapacities.md"/>
-        </toc-element>
-        <toc-element topic="Module_ResourceConverter.md">
             <toc-element topic="Data_ResourceConverter.md"/>
-        </toc-element>
-        <toc-element topic="Module_CargoBay.md">
             <toc-element topic="Data_CargoBay.md"/>
-        </toc-element>
-        <toc-element topic="Module_WheelBase.md">
             <toc-element topic="Data_WheelBase.md"/>
-        </toc-element>
-        <toc-element topic="Module_WheelLock.md">
             <toc-element topic="Data_WheelLock.md"/>
-        </toc-element>
-        <toc-element topic="Module_ControlSurface.md">
             <toc-element topic="Data_ControlSurface.md"/>
-        </toc-element>
-        <toc-element topic="Module_ReinforcedConnection.md">
             <toc-element topic="Data_ReinforcedConnection.md"/>
-        </toc-element>
-        <toc-element topic="Module_Gantry.md">
-            <toc-element topic="Data_Gantry.md"/>
         </toc-element>
     </toc-element>
     <toc-element topic="Resource-Patching-Tutorials.md"/>
