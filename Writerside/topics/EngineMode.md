@@ -1,7 +1,7 @@
 # EngineMode
 <show-structure for="chapter,procedure" depth="2"/>
 
-This module data's C# type is: `KSP.Modules.Data_Engine+EngineMode`.
+This module data's C# type is: `KSP.Modules.Data_Engine.EngineMode`.
 
 This module data's element type is: `engineMode`.
 
