@@ -10,7 +10,7 @@ This module data object has the following classes:
 
 ## ConnectionTarget
 
-type: `string (enum: KSP.Modules.Data_ReinforcedConnection+ConnectionType)`
+type: `string (enum: KSP.Modules.Data_ReinforcedConnection.ConnectionType)`
 
 There is no tooltip attached to this field, please investigate and fill in this field if you can.
 

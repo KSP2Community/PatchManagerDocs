@@ -7,6 +7,8 @@ A part object's element type is: `parts_data`.
 
 Part objects have the following classes:
 
+- `.PrefabAddress`
+- `.IconAddress`
 - `.partName`
 - `.author`
 - `.category`
@@ -74,6 +76,20 @@ Part objects have the following classes:
 - `._description`
 - `._manufacturer`
 - Plus one for every single module as in `.Module_...`
+
+## Addressables Asset Overrides (provided by patch manager)
+
+### PrefabAddress
+
+type: `string`
+
+The address for the prefab to this part.
+
+### IconAddress
+
+type: `string`
+
+The address to the icon to this part.
 
 ## Meta data
 
@@ -303,6 +319,8 @@ This contains a list of all the resources contained in this part, Patch Manager 
         }
     }
 ```
+
+The resourceContainers object also has classes for every single resource contained within them (`.Resource`)
 
 ### AllowKinematicPhysicsIfIntersectTerrain
 
