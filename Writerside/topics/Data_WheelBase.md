@@ -39,7 +39,7 @@ This module data object has the following classes:
 
 ## WheelType
 
-type: `integer`
+type: `string (enum: KSP.Modules.WheelType)`
 
 The Wheel type. Free = free spinning wheel. Motorized - Motorized wheel (rover wheel). Leg = Landing Leg.
 
@@ -57,7 +57,7 @@ The radius of the wheel
 
 ## Center
 
-type: `dictionary[any]`
+type: `dictionary[real] (Vector3)`
 
 The center offset of the wheel
 

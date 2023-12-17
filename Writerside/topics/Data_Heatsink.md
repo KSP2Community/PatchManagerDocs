@@ -13,7 +13,7 @@ This module data object has the following classes:
 
 ## heatsinkType
 
-type: `integer`
+type: `string (enum: KSP.Sim.impl.HeatsinkType)`
 
 There is no tooltip attached to this field, please investigate and fill in this field if you can.
 

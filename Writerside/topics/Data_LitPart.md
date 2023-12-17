@@ -63,7 +63,7 @@ Alpha component colors of the gradient mapping the color transition
 
 ## DefaultActionGroup
 
-type: `integer`
+type: `string (enum: KSP.Sim.KSPActionGroup)`
 
 Action group set by default
 

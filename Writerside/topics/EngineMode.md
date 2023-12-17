@@ -1,7 +1,7 @@
 # EngineMode
 <show-structure for="chapter,procedure" depth="2"/>
 
-This module data's C# type is: `KSP.Modules.Data_Engine.EngineMode`.
+This module data's C# type is: `KSP.Modules.Data_Engine+EngineMode`.
 
 This module data's element type is: `engineMode`.
 
@@ -212,7 +212,7 @@ Maximum Thrust in kN this engine produces at 100% throttle.
 
 ### engineType
 
-type: `integer`
+type: `string (enum: KSP.Modules.EngineType)`
 
 What type of engine is this?
 

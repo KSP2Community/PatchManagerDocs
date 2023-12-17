@@ -139,7 +139,7 @@ The damper tweakable setting that will be applied if adjustForHighGee is true.
 
 ## SuspensionDirection
 
-type: `integer`
+type: `string (enum: KSP.Modules.Data_WheelSuspension+TransformDir)`
 
 The Local Axis the Ssuspension transform travels in.
 

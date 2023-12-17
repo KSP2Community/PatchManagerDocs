@@ -90,13 +90,13 @@ There is no tooltip attached to this field, please investigate and fill in this 
 
 ### rotationAxis
 
-type: `dictionary[any]`
+type: `dictionary[real] (Vector3)`
 
 There is no tooltip attached to this field, please investigate and fill in this field if you can.
 
 ### pitchAxis
 
-type: `dictionary[any]`
+type: `dictionary[real] (Vector3)`
 
 There is no tooltip attached to this field, please investigate and fill in this field if you can.
 

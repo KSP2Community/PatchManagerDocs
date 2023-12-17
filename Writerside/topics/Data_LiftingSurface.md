@@ -58,7 +58,7 @@ The name of the lifting surface curve that will be used from PhysicsGlobals.
 
 ## transformDir
 
-type: `integer`
+type: `string (enum: KSP.Modules.Data_LiftingSurface.TransformDir)`
 
 The Transform Direction that lift is provded in.
 

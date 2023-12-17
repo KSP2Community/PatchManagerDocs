@@ -1,100 +1,275 @@
-# Data_Drag
+# Data_Deployable
 
-This module data's C# type is: `KSP.Modules.Data_Drag`.
+This module data's C# type is: `KSP.Modules.Data_Deployable`.
 
-This module data's element type is: `Data_Drag`.
+This module data's element type is: `Data_Deployable`.
 
 This module data object has the following classes:
 
-- `.BodyLiftEnabled`
-- `.DragEnabled`
-- `.bodyLiftMultiplier`
-- `.cubes`
-- `.weightedArea`
-- `.weightedExposedArea`
-- `.weightedDrag`
-- `.weightedDragMultiplier`
-- `.weightedDepth`
-- `.weightedCenter`
-- `.weightedSize`
-- `.isDragCubeRotated`
-- `.dragCubeRotation`
+- `.showStatus`
+- `.isTracking`
+- `.applyShielding`
+- `.applyShieldingExtend`
+- `.retractable`
+- `.extendable`
+- `.TrackingAlignmentOffset`
+- `.trackingSpeed`
+- `.EditorAnimSpeedMul`
+- `.pivotName`
+- `.alignType`
+- `.secondaryTransform`
+- `.animationName`
+- `.trackingMode`
+- `.originalRotation`
+- `.currentRotation`
+- `.targetGUID`
+- `.LimitRotation`
+- `.UseDeployLimit`
+- `.AxisMinMaxRotation`
+- `.DefaultActionGroup`
+- `.deployCrashTolerance`
+- `.deployMaxTemp`
+- `.deployBreakingForce`
+- `.deployBreakingTorque`
+- `.DisableAnimatorWhenInactive`
+- `.DeployPartTypeName`
+- `.OneTimeExtendActionName`
+- `.DeployToggleActionName`
+- `.ActionGroupToggleName`
+- `.ActionGroupExtendName`
+- `.ActionGroupRetractName`
+- `.DeployStateRetractedName`
+- `.DeployStateExtendedName`
+- `.DeployStateMovingName`
+- `.DeployStateBlockedName`
+- `.DeployStateExtendedCannotRetractName`
+- `.DeployRetractedCannotRetractName`
 
-## BodyLiftEnabled
+## showStatus
 
 type: `boolean`
 
 There is no tooltip attached to this field, please investigate and fill in this field if you can.
 
-## DragEnabled
+## isTracking
 
 type: `boolean`
 
 There is no tooltip attached to this field, please investigate and fill in this field if you can.
 
-## bodyLiftMultiplier
+## applyShielding
+
+type: `boolean`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## applyShieldingExtend
+
+type: `boolean`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## retractable
+
+type: `boolean`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## extendable
+
+type: `boolean`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## TrackingAlignmentOffset
 
 type: `real`
 
 There is no tooltip attached to this field, please investigate and fill in this field if you can.
 
-## cubes
+## trackingSpeed
 
-type: `list[dictionary[any]]`
-
-There is no tooltip attached to this field, please investigate and fill in this field if you can.
-
-## weightedArea
-
-type: `list[real]`
+type: `real`
 
 There is no tooltip attached to this field, please investigate and fill in this field if you can.
 
-## weightedExposedArea
+## EditorAnimSpeedMul
 
-type: `list[real]`
-
-There is no tooltip attached to this field, please investigate and fill in this field if you can.
-
-## weightedDrag
-
-type: `list[real]`
+type: `real`
 
 There is no tooltip attached to this field, please investigate and fill in this field if you can.
 
-## weightedDragMultiplier
+## pivotName
 
-type: `list[real]`
-
-There is no tooltip attached to this field, please investigate and fill in this field if you can.
-
-## weightedDepth
-
-type: `list[real]`
+type: `string`
 
 There is no tooltip attached to this field, please investigate and fill in this field if you can.
 
-## weightedCenter
+## alignType
 
-type: `dictionary[any]`
-
-There is no tooltip attached to this field, please investigate and fill in this field if you can.
-
-## weightedSize
-
-type: `dictionary[any]`
+type: `string`
 
 There is no tooltip attached to this field, please investigate and fill in this field if you can.
 
-## isDragCubeRotated
+## secondaryTransform
+
+type: `string`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## animationName
+
+type: `string`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## trackingMode
+
+type: `string (enum: KSP.Modules.Data_Deployable+TrackingMode)`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## originalRotation
+
+type: `dictionary[real] (Quaternion)`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## currentRotation
+
+type: `dictionary[real] (Quaternion)`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## targetGUID
+
+type: `string`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## LimitRotation
 
 type: `boolean`
 
 There is no tooltip attached to this field, please investigate and fill in this field if you can.
 
-## dragCubeRotation
+## UseDeployLimit
 
-type: `dictionary[any]`
+type: `boolean`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## AxisMinMaxRotation
+
+type: `dictionary[real] (Vector2)`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## DefaultActionGroup
+
+type: `string (enum: KSP.Sim.KSPActionGroup)`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## deployCrashTolerance
+
+type: `real`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## deployMaxTemp
+
+type: `real`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## deployBreakingForce
+
+type: `real`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## deployBreakingTorque
+
+type: `real`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## DisableAnimatorWhenInactive
+
+type: `boolean`
+
+Set this to true will disable the animator when it is inactive. Need this set to true for WHEELS and LANDING LEGS!
+
+## DeployPartTypeName
+
+type: `string`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## OneTimeExtendActionName
+
+type: `string`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## DeployToggleActionName
+
+type: `string`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## ActionGroupToggleName
+
+type: `string`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## ActionGroupExtendName
+
+type: `string`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## ActionGroupRetractName
+
+type: `string`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## DeployStateRetractedName
+
+type: `string`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## DeployStateExtendedName
+
+type: `string`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## DeployStateMovingName
+
+type: `string`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## DeployStateBlockedName
+
+type: `string`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## DeployStateExtendedCannotRetractName
+
+type: `string`
+
+There is no tooltip attached to this field, please investigate and fill in this field if you can.
+
+## DeployRetractedCannotRetractName
+
+type: `string`
 
 There is no tooltip attached to this field, please investigate and fill in this field if you can.
 

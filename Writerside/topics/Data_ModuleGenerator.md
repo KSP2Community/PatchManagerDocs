@@ -25,6 +25,8 @@ This module data object has the following classes:
 - `.EmissiveLerpRateUp`
 - `.EmissiveLerpRateDown`
 
+## Uncategorized
+
 ## General Parameters
 
 ### IsAlwaysActive
@@ -35,7 +37,7 @@ This should not be enabled at the same time as AutoShutdown
 
 ### Status
 
-type: `integer`
+type: `string (enum: KSP.Modules.GeneratorStatus)`
 
 There is no tooltip attached to this field, please investigate and fill in this field if you can.
 

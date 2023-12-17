@@ -29,11 +29,15 @@ This module data object has the following classes:
 - `.IgnoreSASInputs`
 - `.DefaultActionGroup`
 
+## Uncategorized
+
+## Control Surface Behaviour
+
 ## Control Surface Setup
 
 ### CtrlTransformDir
 
-type: `integer`
+type: `string (enum: KSP.Modules.Data_LiftingSurface+TransformDir)`
 
 The Transform Direction that lift is provided in.
 
@@ -41,7 +45,7 @@ This is relative to the CtrlSurfacePivotTransformName or the CtrlSurfaceLiftTran
 
 ### CtrlTransformRotAxis
 
-type: `integer`
+type: `string (enum: KSP.Modules.Data_LiftingSurface+TransformDir)`
 
 The Transform Axis that the control surface rotates around.
 
@@ -77,7 +81,7 @@ This is relative to the CtrlSurfaceDeployTransformName Transform.
 
 ### DeployTransformRotAxis
 
-type: `integer`
+type: `string (enum: KSP.Modules.Data_LiftingSurface+TransformDir)`
 
 The Transform Axis that the control surface deploys around.
 
@@ -165,7 +169,7 @@ There is no tooltip attached to this field, please investigate and fill in this 
 
 ### DefaultActionGroup
 
-type: `integer`
+type: `string (enum: KSP.Sim.KSPActionGroup)`
 
 There is no tooltip attached to this field, please investigate and fill in this field if you can.
 

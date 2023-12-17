@@ -65,13 +65,13 @@ How fast the pitch of the bogey is rotated (in secs).
 
 ## bogeyAxis
 
-type: `dictionary[any]`
+type: `dictionary[real] (Vector3)`
 
 The axis the bogey rotates around.
 
 ## bogeyUpAxis
 
-type: `dictionary[any]`
+type: `dictionary[real] (Vector3)`
 
 The up axis for the bogey.
 

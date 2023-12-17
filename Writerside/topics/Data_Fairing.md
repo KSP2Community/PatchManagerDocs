@@ -54,6 +54,7 @@ This module data object has the following classes:
 - `.MaxAutoFairingTargetRadius`
 - `.MinAutoFairingTargetRadius`
 
+## Uncategorized
 
 ## Floating node
 
@@ -71,13 +72,13 @@ Attach node tag that will be given to the dynamic attach node
 
 ### FloatingNodePosition
 
-type: `dictionary[any]`
+type: `dictionary[real] (Vector3)`
 
 Local position of the floating node relative to the part
 
 ### FloatingNodeDirection
 
-type: `dictionary[any]`
+type: `dictionary[real] (Vector3)`
 
 Local direction that the floating node moves when the Length value is changed
 
@@ -127,13 +128,13 @@ Max steepness to prevent normal artifacting in the mesh
 
 ### LocalUpAxis
 
-type: `dictionary[any]`
+type: `dictionary[real] (Vector3)`
 
 The "up" direction of the fairing
 
 ### Pivot
 
-type: `dictionary[any]`
+type: `dictionary[real] (Vector3)`
 
 The relative center of the procedural mesh
 
@@ -293,7 +294,7 @@ Whether the fairing will have automatic construction set by default
 
 ### DefaultDeployType
 
-type: `integer`
+type: `string (enum: KSP.Modules.FairingDeployType)`
 
 Deploy Type set by default
 

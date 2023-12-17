@@ -125,19 +125,19 @@ There is no tooltip attached to this field, please investigate and fill in this 
 
 ## trackingMode
 
-type: `integer`
+type: `string (enum: KSP.Modules.Data_Deployable+TrackingMode)`
 
 There is no tooltip attached to this field, please investigate and fill in this field if you can.
 
 ## originalRotation
 
-type: `dictionary[any]`
+type: `dictionary[real] (Quaternion)`
 
 There is no tooltip attached to this field, please investigate and fill in this field if you can.
 
 ## currentRotation
 
-type: `dictionary[any]`
+type: `dictionary[real] (Quaternion)`
 
 There is no tooltip attached to this field, please investigate and fill in this field if you can.
 
@@ -161,13 +161,13 @@ There is no tooltip attached to this field, please investigate and fill in this 
 
 ## AxisMinMaxRotation
 
-type: `dictionary[any]`
+type: `dictionary[real] (Vector2)`
 
 There is no tooltip attached to this field, please investigate and fill in this field if you can.
 
 ## DefaultActionGroup
 
-type: `integer`
+type: `string (enum: KSP.Sim.KSPActionGroup)`
 
 There is no tooltip attached to this field, please investigate and fill in this field if you can.
 

@@ -11,7 +11,7 @@ This module data object has the following classes:
 
 ## RadiatorDirection
 
-type: `integer`
+type: `string (enum: KSP.Modules.Data_LiftingSurface.TransformDir)`
 
 This is the axis direction we should use to calculate the area of the radiator for procedural radiators.
 
