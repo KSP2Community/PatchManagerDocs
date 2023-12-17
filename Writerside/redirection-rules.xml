@@ -36,4 +36,20 @@
         <description>Created after removal of "Syntax Reference" from Patch Manager</description>
         <accepts>Syntax-Reference.html</accepts>
     </rule>
+    <rule id="5e0b3359">
+        <description>Created after removal of "Part Module References" from Patch Manager</description>
+        <accepts>Part-Module-References.html</accepts>
+    </rule>
+    <rule id="7ffb3147">
+        <description>Created after removal of "Data_Engine" from Patch Manager</description>
+        <accepts>Data-Engine-md.html</accepts>
+    </rule>
+    <rule id="debf56e">
+        <description>Created after removal of "Data_ModuleActions" from Patch Manager</description>
+        <accepts>Data_ModuleActions.html</accepts>
+    </rule>
+    <rule id="1d9b968a">
+        <description>Created after removal of "Data_ThermalOcclusionData" from Patch Manager</description>
+        <accepts>Data_ThermalOcclusionData.html</accepts>
+    </rule>
 </rules>

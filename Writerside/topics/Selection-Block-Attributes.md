@@ -42,11 +42,11 @@ This attribute can only be used in the outermost selection block, and it is used
 assets, it takes a list of arguments in `()` after it, and these arguments do different things depending on the ruleset of
 the selection block it is attached to.
 
-| Ruleset      | Argument names        | Description of behaviour                                                                            |
-|--------------|-----------------------|-----------------------------------------------------------------------------------------------------|
-| `:parts`     | `name`                | Creates a new part asset of the name "name"                                                         |
-| `:resources` | `name`, `[is_recipe]` | Creates a new resource with "name", this resource is a recipe if `is_recipe` is passed and is true. |
-| `:json`      | `label`, `name`       | Creates a new generic json asset in Addressables with the label `label`, and name `name`.           |
+| Ruleset      | Argument names        | Description of behaviour                                                                                                                                             |
+|--------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `:parts`     | `name`                | Creates a new part asset of the name "name", it is recommended to use [KSP2 Unity Tools](https://github.com/ksp2community/KSP2UnityTools) to generate these patches. |
+| `:resources` | `name`, `[is_recipe]` | Creates a new resource with "name", this resource is a recipe if `is_recipe` is passed and is true.                                                                  |
+| `:json`      | `label`, `name`       | Creates a new generic json asset in Addressables with the label `label`, and name `name`.                                                                            |
 
 > Optional arguments are surrounded by `[]`
 > 
