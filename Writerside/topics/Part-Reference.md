@@ -318,6 +318,7 @@ This contains a list of all the resources contained in this part, Patch Manager 
             /* ... */
         }
     }
+}
 ```
 
 The resourceContainers object also has classes for every single resource contained within them (`.Resource`)
@@ -345,6 +346,7 @@ This contains a list of all the part modules on this part, to add or edit parts 
     * > Module_Something {
         /* ... */
     }
+}
 ```
 
 ### resourceSummary
