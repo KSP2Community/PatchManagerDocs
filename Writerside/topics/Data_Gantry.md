@@ -10,7 +10,7 @@ This module data object has the following classes:
 
 ## environmentType
 
-type: `integer`
+type: `string (enum: KSP.OAB.OABEnvironmentType)`
 
 There is no tooltip attached to this field, please investigate and fill in this field if you can.
 
