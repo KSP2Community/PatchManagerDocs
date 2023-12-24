@@ -190,7 +190,7 @@ To better explain it, here are a few example usages
 User defined variables are variables usually defined as such `$identifier: [expression];`, where they can later be
 referred to by `$identifier`. And now is a perfect time to go over the rules for identifiers. Identifiers are a sequence
 of characters that can start with `a-z`, `A-Z`, and `_`, and then can be followed by those characters and also `0-9`, `.`
-and `-`. `-` may not be the last character of an identifier, and it can only be followed by `a-z` and `A-Z`. 
+and `-`. `-` may not be the last character of an identifier, and it can only be immediately followed by `a-z` and `A-Z`. 
 So `_xyz-f0-f1-f23.4` is a valid identifier but `9rt-g` is not.
 
 ## Expressions
