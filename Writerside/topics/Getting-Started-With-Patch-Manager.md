@@ -107,6 +107,8 @@ C) is it going to add patches and code?
 
 D) is it going to do all of the above?
 
+E) Do you just want to do a single patch
+
 Depending on your answer to the prior question, there are multiple ways to set up your modding environment
 
 <tabs>
@@ -195,6 +197,9 @@ Depending on your answer to the prior question, there are multiple ways to set u
         <p>After you have done that, there should be a <code>plugin_template</code> folder inside the generated project, this is your "mod folder" from now on</p>
         <p>After all that is done, you now need to set up unity according to the <a href="https://wiki.spacewarp.org/wiki/Setting_up_Unity">wiki</a>, and follow the instructions at the end about copying assets (or addressables) only</p>
         <p>Now you have set up your environment</p>
+    </tab>
+    <tab title="Single patch">
+        For a single patch, you can just drop a <code>.patch</code> file into <code>BepInEx/plugins</code> or <code>GameData/mods</code>, or any subfolder thereof
     </tab>
 </tabs>
 

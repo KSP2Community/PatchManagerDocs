@@ -51,7 +51,7 @@ values are as follows:
 
 ### String Values (type: string)
 This type of value represents sequences of characters, usually forming words or similar constructs, but not necessarily.
-They are represented as a sequence of characters enclosed by single (`'`) or double (`"`) quotes.
+They are represented as a sequence of characters enclosed by single (`'`) or double (`"`) quotes, or as a sequence of alphanumeric characters (plus _/-) without quotes.
 A few examples are as follows:
 ```
 "Hello, World"
@@ -61,6 +61,7 @@ A few examples are as follows:
 ' '
 ""
 "\n"
+Pi
 ```
 
 #### String Escape Sequences { collapsible="true" default-state="expanded"}
@@ -193,39 +194,21 @@ of characters that can start with `a-z`, `A-Z`, and `_`, and then can be followe
 and `-`. `-` may not be the last character of an identifier, and it can only be immediately followed by `a-z` and `A-Z`. 
 So `_xyz-f0-f1-f23.4` is a valid identifier but `9rt-g` is not.
 
+#### Modifying user defined variables
+Variables are immutable, but you can redefine a variable in the current scope based of the old value of the variable like follows
+
+```
+$var *: 5;
+$var /: 5;
+$var +: 5;
+$var -: 5;
+```
+
 ## Expressions
 Now that you have learned how to express and store/access data, the last thing you need to learn is how to modify data
 and combine it with other pieces of data. The way to do this, is expressions, which are essentially a sequence of operations
 that can be done on data, like the mathematical concept of an expression. The individual components that describe the
 actions being done are called operators, and the expressions being used with these operators are called operands.
-
-### Foreword: Prefix Expressions { collapsible="true" default-state="expanded" }
-A foreword before going into expressions, certain operators (i.e. `+`, `-`, `*`, and `/`) that are typically binary, can
-be used without a left hand expression if they are the leftmost operator in a field-setting selection action, in this 
-case, they are treated as the left hand expression being `$value`, which allows for easy expression of simple actions
-such as scaling a value and what not.
-An example of this usage is
-```
-:parts #wheel_0v_rover {
-    mass: *5;
-}
-```
-where the `*` is a prefix operator, and this means multiply the mass by 5, as `$value` is equal to the current value of
-the mass. If you are familiar with other programming languages, this is basically how to represent `+=`, `-=`, `*=`, and
-`/=` for fields.
-
-But as for the reason that this is in the foreword, and this is important, is that if you want to set a field to a value
-that is a negative number, **ALWAYS** wrap it in `()` like as follows
-
-```
-:parts #wheel_0v_rover {
-    mass: (-5);
-}
-```
-
-> If you do not wrap your negative values in parentheses, it will be treated like a prefixed subtraction operation
-> 
-{style="warning"}
 
 ### Values and Variables as expressions
 With the foreword out of the way, the simplest type of expression has already been described, values and variable

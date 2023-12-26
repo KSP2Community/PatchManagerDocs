@@ -66,7 +66,28 @@ You can set fields in an object using a few ways, the simplest way is to just se
 :parts #wheel_0v_rover {
     "mass": 5;
 }
+
+// You can also do operations based on the current value of the field
+:parts #wheel_0v_rover {
+    mass +: 5;
+}
+
+:parts #wheel_0v_rover {
+    mass -: 5;
+}
+
+:parts #wheel_0v_rover {
+    mass /: 5;
+}
+
+:parts #wheel_0v_rover {
+    mass *: 5;
+}
 ```
+> Do not try to do `mass : mass * 5`, the second `mass` will be treated as a string, instead use `$value` or `$$mass`
+> 
+{style="warning"}
+
 ### Field Indexors
 But sometimes the field is an array or dictionary, and you want to set a specific index of it, this is where you can do
 the following
@@ -86,6 +107,7 @@ they are defined as follows `$variable-name: ...;` where `...` is the expression
     $my-variable: 5;
 }
 ```
+
 ## Conditionally run selection actions
 These next 2 selection actions are going to be a bit more advanced than the rest, but sometimes you may want to run some
 actions conditionally, and the selectors/filters aren't enough to narrow down this condition, this is where `@if`,

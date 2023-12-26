@@ -1,10 +1,4 @@
 # Stages
-<show-structure for="chapter,procedure" depth="2"/>
-
-> This is going to be added in Patch Manager 0.5.0, it is currently not out
-> 
-{style="note"}
-
 
 Patch Manager implicitly orders your patches into something called "stages", which are distinct temporal steps for when
 your patch will run in relation to others. A stage is essentially a name, with a list of relations to their location in
@@ -31,6 +25,7 @@ forms for this. It is recommended to split up separate concepts from your patche
 ### Mod Implicit Stages
 
 Mod implicit stages are the easiest to define, they are defined using `@define-stage "stage_name";` at the top level.
+stage_name can be a quoted or unquoted string
 
 These stages are defined as being after the last mod implicit stage defined in your mod, or if there were no previous
 mod implicit stages defined for your mod, it is defined as being after `mod_id`.
@@ -40,7 +35,7 @@ This also changes the definition of `mod_id:post` to be after the newly defined 
 Examples of defining implicit stages:
 
 ```
-@define-stage "do-something";
+@define-stage do-something;
 @define-stage "do-something-else";
 @define-stage "do-something-yet-more";
 ```

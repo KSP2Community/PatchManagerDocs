@@ -215,12 +215,12 @@ For examples of usages of for loops:
 @func for-loop-test() {
     $sum-a: 0;
     @for $test-value from 0 through 10 {
-        $sum-a: $sum-a + $test-value;
+        $sum-a +: $test-value;
     }
     // at this point $sum-a is 55
     $sum-b: 0;
     @for $test-value from 0 to 10 {
-        $sum-b: $sum-b + $test-value;
+        $sum-b +: $test-value;
     }
     // at this point $sum-b is 45 as it did not include 10 in the sum
     @return $sum-a - $sum-b; // 10
@@ -257,7 +257,7 @@ A few example of each loops are as follows:
     $scores-by-index: [5,3,1];
     $total-score: 0;
     @each $index, $score in $scores-by-index {
-        $total-score: $total-score + (($index+1)*$score);
+        $total-score +: (($index+1)*$score);
     }
     // $total-score should be 5*1 + 3*2 + 1*3 or 5+6+3 or 14
     $dict: {
@@ -267,7 +267,7 @@ A few example of each loops are as follows:
     };
     $pretty-dict: "{\n";
     @each $key, $value in $dict {
-        $pretty-dict: $pretty-dict + "\t" + $key + ": \"" + $value + "\",\n";
+        $pretty-dict +: "\t" + $key + ": \"" + $value + "\",\n";
     }
     $pretty-dict: $pretty-dict + "}";
     // $pretty-dict is now the following 5 lines as a string
@@ -292,7 +292,7 @@ An example of a while loop is as follows:
     $steps: 0;
     @while $n != 1 {
         $n: $n/2 @if ($n % 2) == 0 @else (3 * $n)+1;
-        $steps: $steps+1;
+        $steps +: 1;
     }
     @return $steps;
 }

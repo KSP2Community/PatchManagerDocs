@@ -13,7 +13,7 @@ For a very simple mixin declaration with no parameters:
 
 ```
 @mixin scale-mass-by-two() {
-    mass: *2;
+    mass *: 2;
 }
 ```
 
@@ -27,16 +27,16 @@ Here are a few examples of the above:
 ```
 // Mixin with one parameter
 @mixin scale-mass-by($N) {
-    mass: *$N;
+    mass *: $N;
 }
 // Mixin with one default parameter
 @mixin scale-max-temp-by($N:2) {
-    maxTemp: *$N;
+    maxTemp *: $N;
 }
 // Mixin with 2 parameters, one default
 @mixin scale-mass-by-and-max-temp-by($mass-scale,$temp-scale:$mass-scale) {
     mass: *$mass-scale;
-    maxTemp: *$temp-scale;
+    maxTemp *: $temp-scale;
 }
 ```
 

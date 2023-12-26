@@ -22,6 +22,7 @@ construct
 ```
 $my-variable: 5;
 $my-other-variable: $my-variable*2;
+$my-variable *: 5;
 ```
 
 ## Define Stages
