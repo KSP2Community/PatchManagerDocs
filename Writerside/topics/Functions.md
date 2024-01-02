@@ -5,7 +5,7 @@ Functions and closures are both ways of defining sequences of expressions for la
 
 
 ## Function Declarations
-Functions are declared as a top level statement using `@func [identifier](parameter-list) {...}` where in the `...` is
+Functions are declared as a top level statement using `@function [identifier](parameter-list) {...}` where in the `...` is
 a list of function level statements. The parameter list is a ',' separated list of parameters of the form `$parameter-name` or
 `$parameter-name:[expression]` where the expression describes the default value for that parameter.
 
@@ -16,14 +16,14 @@ the time of the function call.
 A few example function declarations are as follows:
 
 ```
-@func parameterless() {
+@function parameterless() {
 }
 
-@func add($a,$b) {
+@function add($a,$b) {
     @return $a+$b;
 }
 
-@func create-map($a,$b:$a,$c:$a) {
+@function create-map($a,$b:$a,$c:$a) {
     @return {
         a: $a,
         b: $b,
@@ -48,15 +48,15 @@ where they are in parentheses in the headers of the different types of Values.
 A few example of member functions is as follows
 
 ```
-@func integer.successor($int) {
+@function integer.successor($int) {
     @return $int+1;
 }
 
-@func real.successor($real) {
+@function real.successor($real) {
     @return $real+1.0;
 }
 
-@func list.max($list) {
+@function list.max($list) {
     $max: null;
     @each $value in $list {
         @if max {
@@ -151,7 +151,7 @@ Variable declarations are the same as every other place they can be declared, `$
 For an example of variable declarations within a function:
 
 ```
-@func variable-func($a:5) {
+@function variable-func($a:5) {
     $b: $a + 3;
     $c: $b * 4;
     @return $b + $c;
@@ -175,7 +175,7 @@ Conditionals follow the same `@if`, `@else-if`, `@else` structure as in other se
 
 For an example of conditionals within a function:
 ```
-@func factorial($n) {
+@function factorial($n) {
     @if $n == 0 {
         return 1;
     } @else-if $n == 1 {
@@ -193,7 +193,7 @@ Returning the results of functions to the invoker is quite simple, you just do `
 For example, the following function always returns 5 when called.
 
 ```
-@func return-five() {
+@function return-five() {
     @return 5;
 }
 ```
@@ -212,7 +212,7 @@ over every from the start to whatever end value it has.
 For examples of usages of for loops:
 
 ```
-@func for-loop-test() {
+@function for-loop-test() {
     $sum-a: 0;
     @for $test-value from 0 through 10 {
         $sum-a +: $test-value;
@@ -246,7 +246,7 @@ is the index starting from 0, otherwise, it is the key for the object in the map
 
 A few example of each loops are as follows:
 ```
-@func each-loop-test {
+@function each-loop-test {
     $new-string: "";
     @each $character in "Hello, World!" {
         @if $character != "e" {
