@@ -314,7 +314,7 @@ This contains a list of all the resources contained in this part, Patch Manager 
 
     /* Editing Resources */
     * > resourceContainers {
-        Methalox {
+        * > .Methalox {
             /* ... */
         }
     }
