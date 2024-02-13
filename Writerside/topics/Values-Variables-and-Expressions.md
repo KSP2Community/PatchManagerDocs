@@ -204,6 +204,22 @@ $var +: 5;
 $var -: 5;
 ```
 
+### Variable indexers
+
+When modifying/defining variables, you can use the same indexers that you can with fields
+
+```
+$x[0]: 5; // Creates $x as a list and sets its first index to 5
+$x[0]: 3; // Changes $x's first index to 3
+$x[1]: 2; // Adds 2 to the end of $x
+$x[*] *: 2; // Doubles every value in $x
+$y[0][0]: 5; // Creates y as a multidimensional list, and sets $y[0][0] to 5
+$y[0][0]: 3; // Sets y[0][0] to 3
+```
+
+Remember though, variables are immutable, so even though its "setting" the value to 5 or "doubling" every value,
+it's actually creating a completely new object to replace the variable pointed to by $x
+
 ## Expressions
 Now that you have learned how to express and store/access data, the last thing you need to learn is how to modify data
 and combine it with other pieces of data. The way to do this, is expressions, which are essentially a sequence of operations

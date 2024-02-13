@@ -88,13 +88,17 @@ You can set fields in an object using a few ways, the simplest way is to just se
 > 
 {style="warning"}
 
-### Field Indexors
+### Field Indexers
 But sometimes the field is an array or dictionary, and you want to set a specific index of it, this is where you can do
-the following
+the following,
 ```
 /* some selector */ {
     some_dictionary["some_index"]: 5;
     some_list[3]: 10;
+    // A nested indexer
+    some_nested_list[3][10]: 10;
+    // A mapping indexer (goes through every index and applies the action)
+    some_nested_list[*][10]: 10;
 }
 ```
 
