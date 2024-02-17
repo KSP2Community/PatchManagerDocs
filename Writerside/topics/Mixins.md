@@ -45,6 +45,36 @@ Here are a few examples of the above:
 > 
 {style="note"}
 
+### Slotted Mixins
+
+Sometimes you may want your mixin to take more than just values as arguments, and this is where "Slotted Mixins" come in
+these can take a set of selection actions as a "parameter", and this set can be executed using the `@mixin-slot` keyword
+
+```
+// Unslotted mixin
+@mixin ps-pam-override() {
+    PAMModuleVisualsOverride +: [
+        {
+            PartComponentModuleName: PartComponentModule_PartSwitch,
+            ModuleDisplayName: "VSwift/PartSwitch",
+            ShowHeader: true,
+            ShowFooter: false
+        }
+    ];
+}
+
+// Slotted mixin
+@mixin part-switch() {
+    +Module_PartSwitch {
+        +Data_PartSwitch {
+            @mixin-slot // Whatever selection actions are passed will be executed when this action is executed
+        }
+    }
+    @include ps-pam-override()
+}
+```
+
+
 ## Using Mixins
 
 Now that you have declared mixins, you need to be able to include them into your selection blocks, using the following
@@ -59,25 +89,25 @@ Here are a few examples of including the mixins defined above:
 ```
 
 :parts #wheel_0v_rover {
-    @include scale-mass-by-two(); // Scale the mass by 2 using the parameterless mixin
-    @include scale-max-temp-by(); // Scale the max temp by 2, as the default value of $N is 2
+    @include scale-mass-by-two() // Scale the mass by 2 using the parameterless mixin
+    @include scale-max-temp-by() // Scale the max temp by 2, as the default value of $N is 2
 }
 
 :parts #wheel_1v_rover {
-    @include scale-mass-by(2); // Scale the mass by 2 using the parameterized mixin
-    @include scale-max-temp-by($N:2); // Scale the max temp by 2, and explicitly name the argument
+    @include scale-mass-by(2) // Scale the mass by 2 using the parameterized mixin
+    @include scale-max-temp-by($N:2) // Scale the max temp by 2, and explicitly name the argument
 }
 
 :parts #wheel_2v_rover {
-    @include scale-mass-by-and-max-temp-by(2); // Scale the mass by 2, and the max temp by 2 as the $temp-scale is equal to $mass-scale by default
+    @include scale-mass-by-and-max-temp-by(2) // Scale the mass by 2, and the max temp by 2 as the $temp-scale is equal to $mass-scale by default
 }
 
 :parts #wheel_2v_rover_rugged {
-    @include scale-mass-by-and-max-temp-by(2,4); // Scale the mass by 2, and the max temp by 4
+    @include scale-mass-by-and-max-temp-by(2,4) // Scale the mass by 2, and the max temp by 4
 }
 
 :parts #wheel_3v_rover {
-    @include scale-mass-by-and-max-temp-by($temp-scale:4,$mass-scale:2); // Scale the mass by 2, and the max temp by 4, passing the parameters in reverse
+    @include scale-mass-by-and-max-temp-by($temp-scale:4,$mass-scale:2) // Scale the mass by 2, and the max temp by 4, passing the parameters in reverse
 }
 ```
 
@@ -86,3 +116,37 @@ Here are a few examples of including the mixins defined above:
 > be available in the mixin, and not in the outer selection block.
 > 
 {style="warning"}
+
+### Using Slotted Mixins
+
+To use slotted mixins, the process is the same as a normal `@include` process, but after the `(...)` you start a selection block using
+`{` and then putting the set of actions you want to be put into the slot and closing it with a `}`.
+
+```
+@use "VSwift:*";
+:parts #KLSS_water_tank_2v_1x2 {
+    @include part-switch() { // Everything in the `{}` will be executed when the mixin hits a `@mixin-slot` keyword
+        +Pipes {
+            +No {
+                Transforms: [];
+            }
+            +Yes {
+                Transforms: [
+                    Pipes,
+                    "Sub Hatch"
+                ];
+            }
+        }
+        +Crossbars {
+            +No {
+                Transforms: [];
+            }
+            +Yes {
+                Transforms: [
+                    "Cross Armature"
+                ];
+            }
+        }
+    }
+}
+```
