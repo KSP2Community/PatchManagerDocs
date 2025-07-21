@@ -33,6 +33,13 @@ and as such it pulls in every single part object to be filtered through the rest
 - `:parts` this ruleset matches the part definitions in the game (and makes their object form more conducive to patching)
 - `:resources` this ruleset matches the resource definitions in the game (and again makes their object form more conducive to patching)
 - `:json` this ruleset just matches every json file and does no transformations on them
+- `:missions` this ruleset matches mission definitions
+- `:atmosphere-override` this ruleset matches atmosphere overrides
+- `:galaxy` this ruleset matches galaxy definitions
+- `:volume-cloud-override` this ruleset matches volumetric cloud overrides
+- `:discoverables` this ruleset matches discoverables
+- `:experiments` this ruleset matches science experiments
+- `:science` this ruleset matches tech nodes
 
 ## List of Selectors
 
