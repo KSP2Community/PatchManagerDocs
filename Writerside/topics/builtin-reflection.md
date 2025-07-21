@@ -1,3 +1,7 @@
 # builtin:reflection
 
-Start typing here...
+## Methods
+
+### `typeof($value: any) -> string`
+
+Get the type of a value

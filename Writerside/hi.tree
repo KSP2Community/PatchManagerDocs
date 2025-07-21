@@ -149,6 +149,7 @@
         <toc-element topic="builtin-type-conversion.md"/>
         <toc-element topic="builtin-config.md"/>
         <toc-element topic="builtin-parts.md"/>
+        <toc-element topic="builtin-missions.md"/>
     </toc-element>
     <toc-element topic="Patch-Manager-C-Interop.md"/>
 </instance-profile>
