@@ -135,7 +135,7 @@ assigned to.
 ### Other Types
 
 There is actually one more value type that is considerably more advanced called a `closure` explained within the
-[Functions and Closures](Functions.md) page.
+[](Functions.md) page.
 
 ### Truthiness
 Even though there is a specific `bool` type that already exists, every value has a measure called truthiness, which
@@ -344,7 +344,7 @@ $b: $a / 2; // Becomes 5 as 10 / 2 is 5
 ```
 When used on any other data types, it will throw an error.
 #### %
-This operator results in the the remainder of the division of the value of its left hand by the value of its right hand 
+This operator results in the remainder of the division of the value of its left hand by the value of its right hand 
 operand when used on operands that are numbers (`integer`/`real`), and if either operand is a `real` it will return a 
 `real` otherwise it returns an `integer`.
 ```
@@ -444,13 +444,13 @@ evaluate and result in `[b]`. Or for a better example:
 ```
 $a: 5;
 $b: 3;
-$min: $a @if $a < $b @else $b; Results in 3 as a is not less than b, and in general this will always result in the minimum
+$min: $a @if $a < $b @else $b; // Results in 3 as a is not less than b, and in general this will always result in the minimum
 value between $a and $b
 ```
 
 ### Other Operators
 
-There are a few other operators not described here that are described within the advanced [Functions and Closures](Functions.md) 
+There are a few other operators not described here that are described within the advanced [](Functions.md) 
 page.
 
 ### Combining Expressions
@@ -466,8 +466,8 @@ is as follows:
 3. Unary Prefix `-`
 4. Unary Prefix `+`
 5. Unary Prefix `not`
-6. Simple function call (described in [Functions and Closures](Functions.md))
-7. Member function call (described in [Functions and Closures](Functions.md))
+6. Simple function call (described in [](Functions.md))
+7. Member function call (described in [](Functions.md))
 8. `[]` subscript
 9. `*`
 10. `/`
@@ -484,7 +484,19 @@ is as follows:
 21. `or`
 22. `@if`/`@else`
 
+
+### String Interpolation
+When you are writing string values, you are able to include variables within them using string interpolation.
+String interpolation is done with a `#{expression}` inside the string.
+```
+// Define some variables 
+$x: "Some string";
+$y: 5;
+$z: 20;
+$str: "#{$y*$z}: #{$x}"; // Should end up as "100: Some string"
+```
+
 ## What next
 With the conclusion of this page, you have completed the basic syntax tutorials, and can either start with the
-[Part Patching Tutorials](Part-Patching-Tutorials.md), or continue with learning the syntax under the intermediate section
+[](Part-Patching-Tutorials.md), or continue with learning the syntax under the intermediate section
 of the [General Syntax Tutorials](General-Syntax-Tutorials.md). 
