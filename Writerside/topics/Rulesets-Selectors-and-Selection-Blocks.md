@@ -43,20 +43,20 @@ and as such it pulls in every single part object to be filtered through the rest
 
 ## List of Selectors
 
-| Selector Name             | Usage     | Description                                                                                                                                         |
-|---------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Intersection Selector     | `a b`     | When 2 selectors are separated by white space, it selects only objects that match both selectors                                                    |
-| Combination Selector      | `a,b`     | When 2 selectors are separated by a comma, it selects all objects that match either selector                                                        |
-| Precedence Selector       | `(a)`     | Wrap a selector in parentheses to ensure the order of selection is to your liking                                                                   |
-| Name Selector             | `#xyz`    | Selects all objects that have a name, the name can include single character and multi character wildcards (?/*)                                     |
-| Without Name Selector     | `~#xyz`   | Does the exact opposite of the name selector                                                                                                        |
-| Element Selector          | `xyz`     | Matches a field (usually used in the child selector construct)                                                                                      |
-| Class Selector            | `.xyz`    | Matches objects that have a certain class in their class list (depends on the ruleset but a lot of the time just a list of fieldnames)              |
-| Class Capture Selector    | `.xyz:[]` | Similar to a class selector, with some more advanced semantics explained within the [](Class-Capture-Selector.md) page                              |
-| Without Class Selector    | `~.xyz`   | Matches all objects that do not have a certain class                                                                                                |
-| Child Selector            | `*>Field` | Grabs all the children of every object from the left-hand side selector and filters those children through the righthandside selector               |
-| Element Addition Selector | `+xyz`    | Adds an element to every object going through the selector and selects that element                                                                 |
-| Ensure Element Selector   | `%xyz`    | For every object going through this selector, if it has a certain element, select that, otherwise add that element to the object and then select it |
+| Selector Name             | Usage                | Description                                                                                                                                                          |
+|---------------------------|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Intersection Selector     | `a b`                | When 2 selectors are separated by white space, it selects only objects that match both selectors                                                                     |
+| Combination Selector      | `a,b`                | When 2 selectors are separated by a comma, it selects all objects that match either selector                                                                         |
+| Precedence Selector       | `(a)`                | Wrap a selector in parentheses to ensure the order of selection is to your liking                                                                                    |
+| Name Selector             | `#xyz` or `#"xyz"`   | Selects all objects that have a name, the name can include single character and multi character wildcards (?/*), the quoted version can include string interpolation |
+| Without Name Selector     | `~#xyz` or `~#"xyz"` | Does the exact opposite of the name selector                                                                                                                         |
+| Element Selector          | `xyz`                | Matches a field (usually used in the child selector construct)                                                                                                       |
+| Class Selector            | `.xyz`               | Matches objects that have a certain class in their class list (depends on the ruleset but a lot of the time just a list of fieldnames)                               |
+| Class Capture Selector    | `.xyz:[]`            | Similar to a class selector, with some more advanced semantics explained within the [](Class-Capture-Selector.md) page                                               |
+| Without Class Selector    | `~.xyz`              | Matches all objects that do not have a certain class                                                                                                                 |
+| Child Selector            | `*>Field`            | Grabs all the children of every object from the left-hand side selector and filters those children through the righthandside selector                                |
+| Element Addition Selector | `+xyz`               | Adds an element to every object going through the selector and selects that element                                                                                  |
+| Ensure Element Selector   | `%xyz`               | For every object going through this selector, if it has a certain element, select that, otherwise add that element to the object and then select it                  |
 
 
 But what can be done inside selection blocks? That is what [Selection Actions](Selection-Actions.md) are for.
